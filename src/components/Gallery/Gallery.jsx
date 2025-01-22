@@ -1,57 +1,21 @@
-import React from 'react'
-import Lightroom from 'react-lightbox-gallery'
-import GalleryImg1 from "../../assets/images/gallery/g1.jpg"
-import GalleryImg3 from "../../assets/images/gallery/g3.jpg"
-import GalleryImg4 from "../../assets/images/gallery/g4.jpg"
-import GalleryImg6 from "../../assets/images/gallery/g6.jpg"
-import GalleryImg7 from "../../assets/images/gallery/g7.jpg"
-
+import React from 'react';
 
 const Gallery = () => {
+  const images = [
+    { src: 'path/to/image1.jpg', thumb: 'path/to/thumb1.jpg' },
+    { src: 'path/to/image2.jpg', thumb: 'path/to/thumb2.jpg' },
+    // Add more images as needed
+  ];
 
-    var images = [
-        {
-            src: GalleryImg1,
-            desc: "Person wearing shoes",
-            sub: "Gift Habeshaw"
-        },
-        {
-            src: GalleryImg3,
-            desc: "Blonde woman wearing sunglasses smiling at the camera ",
-            sub: "Dmitriy Frantsev"
-        },
-        {
-            src: GalleryImg6,
-            sub: "Harry Cunningham"
-        },
-        {
-            src: GalleryImg4,
-            desc: "Jaipur , Rajasthan India",
-            sub: "Liam Baldock"
-        },
-        {
-            src: GalleryImg7,
-            sub: "Verne Ho"
-        },
-        {
-            src: GalleryImg6,
-            desc: "Rann of kutch , India",
-            sub: "Hari Nandakumar"
-        },
-    ];
+  return (
+    <div className="gallery">
+      {images.map((image, index) => (
+        <a key={index} href={image.src} data-lg-size="1600-2400">
+          <img src={image.thumb} alt={`Gallery ${index + 1}`} />
+        </a>
+      ))}
+    </div>
+  );
+};
 
-    var settings = {
-        columnCount: {
-            default: 3,
-            mobile: 2,
-            tab: 3
-        },
-        mode: "dark",
-        enableZoom:false,
-    };
-    return (
-        <Lightroom images={images} settings={settings} />
-   );
-}
-
-export default Gallery
+export default Gallery;

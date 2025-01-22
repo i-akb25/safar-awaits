@@ -77,7 +77,7 @@ Safar-Awaits/
 
 ## 🌟 Live Demo
 
-Explore the live version of **Safar Awaits**: [Safar Awaits Live](#)
+Explore the live version of **Safar Awaits**: [Safar Awaits Live](https://safar-awaits.netlify.app/)
 
 ---
 
